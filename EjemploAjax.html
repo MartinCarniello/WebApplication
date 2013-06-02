@@ -1,0 +1,85 @@
+	<html>
+
+		<head>
+
+		<title>Ejemplo1</title>
+
+		  <script language = "javascript">
+
+		  	function pedirDatos(fuenteDatos, elementID){
+
+		  		var XMLHttpRequestObject = false;
+
+			  	if (window.XMLHttpRequest) {
+
+			  	XMLHttpRequestObject = new XMLHttpRequest();
+
+			  	} 
+			  	else if (window.ActiveXObject) {
+
+			  		XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+
+			  	}
+
+			  	var elementHTML = document.getElementById(elementID);;
+
+			  	if(XMLHttpRequestObject) {
+
+					XMLHttpRequestObject.open("GET", fuenteDatos);
+
+					XMLHttpRequestObject.onreadystatechange = function(){
+
+						if (XMLHttpRequestObject.readyState == 4 && XMLHttpRequestObject.status == 200) {
+
+							elementHTML.innerHTML = XMLHttpRequestObject.responseText;
+
+				  		}
+
+		  			}
+
+		  			XMLHttpRequestObject.send(null);
+
+		  		} 
+
+		  	}
+
+		  	function makeHotelList(htmlElement) {
+
+		  		json = pedirDatos("ejemploJson.json")
+		  	}
+
+		  </script>
+
+		</head>
+
+		<body>
+
+			<H1>Mostrando datos con AJAX</H1>
+
+			<form>
+
+				<input type = "button" value = "Mostrar datos" onclick = "pedirDatos('datos.txt','targetDiv')">
+				<input type = "button" value = "Mostrar elementos de la lista" onclick = "pedirDatos('ajax.html','targetDiv')">
+				<input type = "button" value = "Mostrar hoteles" onclick = "makeHotelList('jsonejemplo.json', 'hotels')">
+
+			</form>
+
+			<div id="targetDiv" style="background-color:#99FF66;">
+
+			<p>Aqu&iacute; aparecer&aacute; texto</p>
+
+			</div>
+
+			<ul id='targetDiv'>
+			
+			</ul>
+
+			<div id = 'hotels'>
+
+				<p>HOTELES</p>
+
+			</div>
+
+			</body>
+
+</html>

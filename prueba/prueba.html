@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		
+		<link rel="stylesheet" href="prueba.css"/>
+
+		<title>Juegos</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Martin" />
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		
+		<script src="functions.js"></script>
+
+	</head>
+
+	<body>		
+		<div>
+			<header>
+				<h1>Juegos</h1>
+			</header>
+			<nav>
+				<input type="button" value="Change" onClick="change();"/>
+
+				<div id="changeButton">
+				  
+				  	<p>I will change</p>
+				
+					<p>I will change too</p>
+					
+					<p>I will fucking change too</p>
+				  
+				</div>
+				
+				<input type="button" value="Alert" id="alertButton" onclick="alertButton()"/>
+				
+				<p>Please put your name in the box below:</p>
+				
+				<input type="text" id="getName"/>
+				<input type="button" value="Submit" id="submit" onclick="getName()"/>
+				<br />
+				<input type="button" value="Get Json" id="getJson" onclick="getJson('hoteles.json')"/>
+				
+				<br />
+				
+				<div id="hotels">
+				  
+				</div>
+			</nav>
+
+			<div>
+
+			</div>
+
+			<footer>
+				<p>
+					&copy; Copyright  by Martin
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

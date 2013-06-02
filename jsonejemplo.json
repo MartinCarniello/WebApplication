@@ -1,0 +1,31 @@
+{
+	"hotels": {
+		"carima":{
+			"rooms": "5",
+			"stars": "4",
+			"services": {
+				"swimmingPool": "true",
+				"football": "true",
+				"tennis": "false"
+			}
+		},
+		"fiamingo":{
+			"rooms": "3",
+			"stars": "3",
+			"services": {
+				"swimmingPool": "false",
+				"football": "true",
+				"tennis": "true"
+			}
+		},
+		"sheraton": {
+			"rooms": "10",
+			"stars": "5",
+			"services": {
+				"swimmingPool": "true",
+				"football": "true",
+				"tennis": "true"
+			}
+		}
+	}
+}

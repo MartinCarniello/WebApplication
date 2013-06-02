@@ -1,0 +1,18 @@
+{
+ "hotels": [
+ {"name": "carima",
+  "rooms": 5,
+  "stars": 4,
+  "mts" : 1000
+ },
+ {"name": "fiamingo",
+  "rooms": 3,
+  "stars": 3,
+  "mts" : 2000
+ },
+ {"name": "sheraton",
+  "rooms": 10,
+  "stars": 5,
+  "mts" : 3000
+ }]
+}
